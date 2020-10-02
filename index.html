@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="icon" href="img/udb.ico" type="image/ico" />
+    <script src="js/registro.js"></script>
+</head>
+
+<body>
+
+    <div class="modal" tabindex="-1" id="modalavi">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Aviso</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                </div>
+                <div class="modal-body">
+                    <p>Contraseña no coincide.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Modal usuario-->
+    <div class="modal" tabindex="-1" id="modalusuario">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Aviso</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="closeusu">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                </div>
+                <div class="modal-body">
+                    <p>El usuario debe ser de un minimo de 5 caracteres y un maximo de 10 utilizando solo letras y numeros .</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" id="closeusu1">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal Email-->
+    <div class="modal" tabindex="-1" id="modalmail">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Aviso</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="closemail">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                </div>
+                <div class="modal-body">
+                    <p>El correo electronico debe ser de la siguiente forma correo@dominio.com .</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" id="closemail1">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal Contraseña-->
+    <div class="modal" tabindex="-1" id="modalcontra">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Aviso</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="closecontra">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                </div>
+                <div class="modal-body">
+                    <p>La Contraseña debe contener almenos 1 Minuscula, 1 Mayuscula, 1 numero y entre 5 a 15 caracteres.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" id="closecontra1">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Modal final-->
+    <div class="modal" tabindex="-1" id="modalultimo">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Aviso</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="closeultimo">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                </div>
+                <div class="modal-body">
+                    <p>Registro exitoso .</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" id="closeultimo1">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <main role="main">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <form class="form-signin">
+                        <div class="text-center mb-4">
+                            <br><br>
+                            <h1 class="h3 mb-3 font-weight-normal">Registro de cuenta</h1>
+                        </div>
+                        <div class="form-label-group">
+                            <input type="User" id="inputUser" class="form-control" placeholder="Usuario" required autofocus>
+                            <label for="inputEmail">Nombre de usuario</label>
+                        </div>
+
+                        <div class="form-label-group">
+                            <input type="email" id="inputEmail" class="form-control" placeholder="Correo electronico" required>
+                            <label for="inputEmail">Correo electronico</label>
+                        </div>
+
+                        <div class="form-label-group">
+                            <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required>
+                            <label for="inputPassword">Contraseña</label>
+                        </div>
+                        <div class="form-label-group">
+                            <input type="password" id="inputREPassword" class="form-control" placeholder="Contraseña" required>
+                            <label for="inputPassword">Confirmar Contraseña</label>
+                        </div>
+
+                        <div class="checkbox mb-3">
+                            <label>
+
+              </label>
+                        </div>
+
+
+
+                        <button class="btn btn-lg btn-primary btn-block" type="button" onclick="return miregistro()" id="Mybtn">Registrar</button>
+                        <p class="mt-5 mb-3 text-muted text-center">Lenguajes interpretados en cliente</p>
+                    </form>
+                </div>
+            </div>
+
+            <hr>
+            <hr>
+
+        </div>
+        <!-- /Cierre de contenido -->
+
+    </main>
+
+    <footer class="container">
+        <p>Universidad Don Bosco 2020 &copy; </p>
+    </footer>
+
+</html>
